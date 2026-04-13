@@ -1,0 +1,7 @@
+C:\Users\magal\Documents\LojaRpj\LojaRpj\bin\Debug\LojaRpj.exe.config
+C:\Users\magal\Documents\LojaRpj\LojaRpj\bin\Debug\LojaRpj.exe
+C:\Users\magal\Documents\LojaRpj\LojaRpj\bin\Debug\LojaRpj.pdb
+C:\Users\magal\Documents\LojaRpj\LojaRpj\obj\Debug\LojaRpj.csproj.AssemblyReference.cache
+C:\Users\magal\Documents\LojaRpj\LojaRpj\obj\Debug\LojaRpj.csproj.CoreCompileInputs.cache
+C:\Users\magal\Documents\LojaRpj\LojaRpj\obj\Debug\LojaRpj.exe
+C:\Users\magal\Documents\LojaRpj\LojaRpj\obj\Debug\LojaRpj.pdb
