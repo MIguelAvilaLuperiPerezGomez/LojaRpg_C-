@@ -1,0 +1,37 @@
+name: Avisar portfolio-auto-poster sobre merge
+
+# Este workflow NÃO gera nem publica nada sozinho.
+# Ele só avisa o repositório central (portfolio-auto-poster) que houve um merge,
+# enviando os dados do PR. Todo o trabalho pesado (Gemini + LinkedIn) acontece lá.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  notify-central-repo:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Disparar evento no repositório central
+        env:
+          # Token com permissão mínima (só "repo" ou até mais restrito),
+          # gerado uma única vez e salvo como secret NOTIFY_TOKEN neste repositório.
+          NOTIFY_TOKEN: ${{ secrets.NOTIFY_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer $NOTIFY_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/MiguelAvilaLuperiPerezGomez/portfolio-auto-poster/dispatches \
+            -d '{
+              "event_type": "pr-merged",
+              "client_payload": {
+                "repo_name": "${{ github.repository }}",
+                "repo_url": "https://github.com/${{ github.repository }}",
+                "pr_title": "${{ github.event.pull_request.title }}",
+                "pr_body": "${{ github.event.pull_request.body }}",
+                "changed_files": "${{ github.event.pull_request.changed_files }}"
+              }
+            }'
