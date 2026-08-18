@@ -89,7 +89,7 @@ Funcionamento
 2.0 O sistema roda sem quebrar? Cadastra, vende e lista corretamente?
 Arquitetura e POO 3.0
 Uso correto de Herança, Interfaces, Encapsulamento e separação do
-Main
+Main.
 LINQ e Coleções 2.0 Uso eficiente do LINQ para gerar os relatórios solicitados.
 Documentação 1.0 Qualidade do PDF de detalhamento técnico do sistema.
 Apresentação (Pitch) 2.0 Clareza, domínio técnico durante as perguntas e gestão do tempo.
