@@ -93,4 +93,4 @@ Main.
 LINQ e Coleções 2.0 Uso eficiente do LINQ para gerar os relatórios solicitados.
 Documentação 1.0 Qualidade do PDF de detalhamento técnico do sistema.
 Apresentação (Pitch) 2.0 Clareza, domínio técnico durante as perguntas e gestão do tempo.
-Boa sorte, aventureiros! Que o código compile de primeira.
+Boa sorte, aventureiros! Que o código compile de primeira
